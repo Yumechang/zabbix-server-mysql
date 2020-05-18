@@ -1,4 +1,4 @@
-FROM zabbix/zabbix-server-mysql:alpine-latest
+FROM zabbix/zabbix-server-mysql:alpine-5.0-latest
 USER root
 RUN apk add curl tzdata nmap sudo && rm -r /var/cache/apk/* &&\
     sed -e 's/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/g' -i /etc/sudoers &&\
